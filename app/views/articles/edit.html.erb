@@ -1,4 +1,4 @@
-<h1>Create a New Article</h1>
+<h1>Edit Article</h1>
 
 
 
@@ -13,7 +13,7 @@
 <% end %>
 
 
-<%= form_with scope: :article, url: articles_path,  local: true do |f| %>
+<%= form_with(model: @article, local: true)   do |f| %>
 
 <p>
 	<%= f.label :title %></br>
@@ -31,6 +31,7 @@
 
 </p>
 
+
 <% end %>
 
-<%= link_to 'Return Home', articles_path %>
+<%= link_to 'Cancel and Return Home', articles_path %>
